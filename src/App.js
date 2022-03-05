@@ -14,15 +14,15 @@ const generateClassName = createGenerateClassName({
 
 export default () => {
   return (
-    <div>
-      <BrowserRouter>
-        <StylesProvider generateClassName={generateClassName}>
+    <StylesProvider generateClassName>
+      <div>
+        <BrowserRouter>
           <Switch>
             <Route exact path="/pricing" component={Pricing} />
             <Route path="/" component={Landing} />
           </Switch>
-        </StylesProvider>
-      </BrowserRouter>
-    </div>
+        </BrowserRouter>
+      </div>
+    </StylesProvider>
   );
 };
